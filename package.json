@@ -6,13 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prepare": "husky install",
     "lint": "next lint",
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint"
-    }
   },
   "dependencies": {
     "next": "12.2.3",
