@@ -15,7 +15,34 @@
     }
   },
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "zones": [
+          {
+            "target": "./src/components",
+            "from": "./src/containers"
+          },
+          {
+            "target": "./src/components",
+            "from": "./src/lib"
+          },
+          {
+            "target": "./src/components",
+            "from": "./src/pages"
+          },
+          {
+            "target": "./src/lib",
+            "from": "./src/pages"
+          },
+          {
+            "target": "./src/containers",
+            "from": "./src/pages"
+          }
+        ]
+      }
+    ]
   },
   "globals": {
     "React": "writable"
